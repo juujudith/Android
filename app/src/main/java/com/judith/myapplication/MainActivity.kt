@@ -29,6 +29,17 @@ class MainActivity : AppCompatActivity() {
             return null
         }
 
+        val dia = 22
+        val mes = “Setembre”
+        val any = 2026
+        val temperatura = 27.5
+
+        println("hola")
+
+        var nom1: String? = “Judith”
+        var nom2: String = “Judith”
+
+
         // 2.
 
 
@@ -64,6 +75,8 @@ class MainActivity : AppCompatActivity() {
 
 
         // 7. Funcions lambda
+        val suma: (Int, Int) -> Int = { a, b -> a + b }
+        println(suma(3, 5))   // 8
 
 
         // 8. Col·leccions immutables i mutables
