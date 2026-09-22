@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        /*
         println("hola")
+
 
         // 21/09/2026
 
@@ -80,6 +82,6 @@ class MainActivity : AppCompatActivity() {
 
 
         // 8. Col·leccions immutables i mutables
-
+    */
     }
 }
