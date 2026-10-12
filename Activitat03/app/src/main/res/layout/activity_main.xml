@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0E21"
+    android:orientation="vertical">
+
+    <!-- TÍTULO DE ARRIBA -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/b_amp_o_bmi_calculator"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- FILA HORIZONTAL: MALE y FEMALE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp">
+
+        <!-- MALE (Cardview + layout vertical + imagen + texto) -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMale"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#111328"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="@string/icono_de_hombre"
+                    android:src="@drawable/male"
+                    app:tint="#FFFFFF"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:textColor="#8D8E98"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- FEMALE (Cardview + layout vertical + imagen + texto)-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFemale"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#111328"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="@string/icono_de_mujer"
+                    android:src="@drawable/female"
+                    app:tint="#FFFFFF"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textColor="#8D8E98"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- HEIGHT (Cardview, layout vertical, texto, layout horizontal, núm + inch) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#1D1E33"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- TEXTO HEIGHT -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/height"
+                android:textColor="#8D8E98"
+                android:textSize="16sp" />
+
+            <!-- FILA número + inches -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <!-- TEXTO NÚMERO -->
+                <TextView
+                    android:id="@+id/tvAltura"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_73"
+                    android:textColor="@color/white"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <!-- TEXTO INCHES -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/inches"
+                    android:textColor="#8D8E98"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- SLIDER -->
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/altura_en_pulgadas"
+                android:stepSize="1"
+                android:value="73"
+                android:valueFrom="40"
+                android:valueTo="100"
+                app:tickVisible="false"
+                app:labelBehavior="gone"
+                app:thumbColor="#512DA8"
+                app:trackColorActive="#512DA8"
+                app:trackColorInactive="#8D8E98"
+                app:haloColor="#33512DA8"
+                app:trackHeight="2dp"
+                app:thumbWidth="20dp"
+                app:thumbHeight="20dp"
+                app:thumbTrackGapSize="0dp"
+                app:trackStopIndicatorSize="0dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- WEIGHT y AGE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+            <!-- CARDVIEW WEIGHT -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#1D1E33"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- TEXTO WEIGHT -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weight"
+                    android:textAlignment="center"
+                    android:textColor="#8D8E98"
+                    android:textSize="16sp">
+                </TextView>
+
+                <!-- TEXTO NÚMERO -->
+                <TextView
+                    android:id="@+id/tvPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_170"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="40sp">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <!-- BOTÓN - -->
+                    <Button
+                        android:id="@+id/btnPesoMenos"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:contentDescription="@string/reducir_peso"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="@string/menos"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:cornerRadius="24dp" />
+
+                    <!-- BOTÓN + -->
+                    <Button
+                        android:id="@+id/btnPesoMas"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@string/aumentar_peso"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="@string/mas"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:cornerRadius="24dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CARDVIEW AGE -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#1D1E33"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <!-- TEXTO AGE -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age"
+                    android:textAlignment="center"
+                    android:textColor="#8D8E98"
+                    android:textSize="16sp">
+                </TextView>
+
+                <!-- TEXTO NÚMERO -->
+                <TextView
+                    android:id="@+id/tvEdad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_18"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="40sp">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <!-- BOTÓN - (AGE) -->
+                    <Button
+                        android:id="@+id/btnEdadMenos"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:contentDescription="@string/reducir_edad"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="@string/menos2"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:cornerRadius="24dp" />
+
+                    <!-- BOTÓN + (AGE) -->
+                    <Button
+                        android:id="@+id/btnEdadMas"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
+                        android:layout_marginStart="8dp"
+                        android:contentDescription="@string/aumentar_edad"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="0dp"
+                        android:text="@string/mas2"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:cornerRadius="24dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Espacio encima de Calculate -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- BOTÓN CALCULATE -->
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:backgroundTint="#512DA8"
+        android:text="@string/calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Activitat03</string>
+    <string name="b_amp_o_bmi_calculator"><![CDATA[B & O BMI CALCULATOR]]></string>
+    <string name="icono_de_hombre">Icono de hombre</string>
+    <string name="icono_de_mujer">Icono de mujer</string>
+    <string name="male">MALE</string>
+    <string name="female">FEMALE</string>
+    <string name="height">HEIGHT</string>
+    <string name="_73">73</string>
+    <string name="inches">inches</string>
+    <string name="altura_en_pulgadas">Altura en pulgadas</string>
+    <string name="weight">WEIGHT</string>
+    <string name="_170">170</string>
+    <string name="menos">-</string>
+    <string name="reducir_peso">Reducir peso</string>
+    <string name="age">AGE</string>
+    <string name="aumentar_peso">Aumentar peso</string>
+    <string name="mas">+</string>
+    <string name="_18">18</string>
+    <string name="reducir_edad">Reducir edad</string>
+    <string name="menos2">-</string>
+    <string name="aumentar_edad">Aumentar edad</string>
+    <string name="mas2">+</string>
+    <string name="calculate">CALCULATE</string>
+</resources>
